@@ -26,7 +26,7 @@ class TodoInput extends StatelessWidget {
               new Container(
                 margin: new EdgeInsets.only(left: 5.0),
                 child: new RaisedButton(
-                  color: Colors.blue,
+                  color: Colors.blue[700],
                   child: new Text('Add Todo'),
                   onPressed: () {
                     return showDialog(

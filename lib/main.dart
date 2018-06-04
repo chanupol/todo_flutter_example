@@ -16,6 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void dispose() {
     // TODO: implement dispose
+    todoTextController.dispose();
     super.dispose();
   }
 
