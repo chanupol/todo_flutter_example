@@ -5,12 +5,20 @@ void main() => runApp(new MaterialApp(home: new MyApp()));
 
 class MyApp extends StatefulWidget {
   @override
-  MyAppState createState() => MyAppState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   String _todo = '';
   String _appBarTitle = 'Todo Example';
+  final todoTextController = new TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -18,7 +26,7 @@ class MyAppState extends State<MyApp> {
       appBar: new AppBar(
         title: new Text(_appBarTitle),
       ),
-      body: new TodoInput(),
+      body: new TodoInput(todoTextController: todoTextController),
     );
   }
 }
